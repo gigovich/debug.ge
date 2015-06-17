@@ -1,0 +1,14 @@
+baseurl = "http://debug.ge/"
+languageCode = "ge-ka"
+title = "debug.ge"
+disqusShortname = "debuggivi"
+MetaDataFormat = "toml"
+theme = "hyde-x"
+paginate = 10
+
+
+[author]
+    name = "debug.ge"
+
+[params]
+    highlight = "solarized_light"
