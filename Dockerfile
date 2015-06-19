@@ -2,7 +2,12 @@ FROM golang
 
 RUN apt-get update && apt-get -y upgrade
 RUN apt-get -y install git mercurial
-RUN go get -u -v github.com/spf13/hugo
+RUN cd /go/src && mkdir -p github.com/spf13 && \
+    cd github.com/spf13 && \
+    git clone https://github.com/spf13/hugo.git && \
+    cd hugo && \
+    git reset --hard v0.14 && \
+    go get github.com/spf13/hugo
 RUN git clone https://github.com/gigovich/debug.ge.git /home/debug.ge
 RUN cd /home/debug.ge && git submodule update --init themes/hyde-x
 
