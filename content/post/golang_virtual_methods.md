@@ -29,7 +29,7 @@ type Oak struct {
 }
 
 // Сделаем shadow для этого метода
-func (t Tree) IsFoliar() string {
+func (o Tree) IsFoliar() string {
     return true
 }
 
